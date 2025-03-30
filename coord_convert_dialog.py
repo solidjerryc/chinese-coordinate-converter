@@ -10,6 +10,7 @@
 """
 
 import os
+import webbrowser
 
 from qgis.PyQt import uic
 from qgis.PyQt.QtCore import QSettings
@@ -57,7 +58,8 @@ class CoordConvertDialog(QDialog, FORM_CLASS):
                 'Language changed, but some text may not be translated.': 'Language changed, but some text may not be translated.',
                 'Error': 'Error',
                 'Failed to switch language': 'Failed to switch language',
-                'Select a layer': 'Select a layer'
+                'Select a layer': 'Select a layer',
+                'About': 'About'
             },
             'zh': {
                 'Coordinate Converter': '坐标转换器',
@@ -80,7 +82,8 @@ class CoordConvertDialog(QDialog, FORM_CLASS):
                 'Language changed, but some text may not be translated.': '语言已更改，但某些文本可能未被翻译。',
                 'Error': '错误',
                 'Failed to switch language': '切换语言失败',
-                'Select a layer': '选择图层'
+                'Select a layer': '选择图层',
+                'About': '关于'
             }
         }
         
@@ -95,6 +98,12 @@ class CoordConvertDialog(QDialog, FORM_CLASS):
         
         # 连接语言切换按钮
         self.btnSwitchLanguage.clicked.connect(self.switch_language)
+        
+        # 连接关于按钮
+        self.btnAbout.clicked.connect(self.open_about_page)
+        
+        # 修改帮助按钮行为 - 移除帮助按钮
+        self.button_box.setStandardButtons(self.button_box.Close)
         
         # 连接临时图层复选框
         self.chkUseTemporaryLayer.toggled.connect(self.toggle_output_controls)
@@ -128,6 +137,10 @@ class CoordConvertDialog(QDialog, FORM_CLASS):
         
         # 初始调用一次，确保初始状态正确
         self.on_input_crs_changed()
+
+    def open_about_page(self):
+        """打开关于页面"""
+        webbrowser.open("https://github.com/solidjerryc/chinese-coordinate-converter")
 
     def initialize_ui(self):
         """初始化UI组件"""
