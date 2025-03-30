@@ -1,0 +1,3 @@
+<qresource prefix="/plugins/coord_convert" >
+    <file>icon.svg</file>
+</qresource>

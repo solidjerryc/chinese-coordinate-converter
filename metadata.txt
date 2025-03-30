@@ -1,0 +1,45 @@
+# This file contains metadata for your plugin.
+# This file should be included when you package your plugin.
+# Mandatory items:
+
+[general]
+name=Chinese Coordinate Converter
+qgisMinimumVersion=3.0
+description=A QGIS plugin for Chinese coordinate system conversion between WGS-84, GCJ-02, and BD-09 coordinate systems.
+version=0.1
+author=Boqin Cai
+email=solidjerryc@gmail.com
+
+about=This plugin allows transformation between WGS-84 (non-offset coordinates), GCJ-02 (used by National Bureau of Surveying and Mapping, AutoNavi, Tencent), and BD-09 (Baidu) coordinate systems. Supports multiple output formats including Temporary Layer, Shapefile, GeoJSON, KML, and GeoPackage.
+
+tracker=https://github.com/solidjerryc/chinese-coordinate-converter/issues
+repository=https://github.com/solidjerryc/chinese-coordinate-converter
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=coordinate, transformation, china, wgs84, gcj02, bd09, convert, vector, mars coordinates
+
+homepage=https://github.com/solidjerryc/chinese-coordinate-converter
+category=Vector
+icon=icon.svg
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+# category=Vector
+
+# If the plugin can run on QGIS Server.
+server=False
