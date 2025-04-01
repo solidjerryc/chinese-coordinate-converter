@@ -29,7 +29,7 @@ This plugin supports conversion between the following coordinate systems:
 
 ## License
 
-This plugin is licensed under the MIT License.
+This plugin is licensed under the GPLv2 License.
 
 ## Acknowledgments
 
@@ -68,7 +68,7 @@ This plugin uses coordinate conversion code from [coord-convert](https://github.
 
 ## 许可证
 
-该插件采用MIT许可证授权。
+该插件采用GPLv2许可证授权。
 
 ## 致谢
 
